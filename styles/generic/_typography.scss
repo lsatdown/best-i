@@ -1,0 +1,14 @@
+// Root Font Size Variable — best to avoid changing unless you like risks.
+// If you're relying on it **relatively** with ems, be careful.
+$root-font-size: 16!default;
+
+/**
+*
+* Apply Typographic Settings
+*
+**/
+@if $root-font-size != 16 {
+    html {
+        font-size: $root-font-size * 1px;
+    }
+}
