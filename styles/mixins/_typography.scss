@@ -1,5 +1,17 @@
 /**
 *
+* Cleartext Mixin
+*
+* For use on elements or whole pages needing text antialiasing.
+*
+**/
+@mixin cleartext() {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+*
 * Type Setting Mixin
 *
 * Let all your relative type size worries wash away with this mixin.

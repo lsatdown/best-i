@@ -16,4 +16,34 @@ $root-font-size: 16!default;
 body {
     font-family: $body-font;
     @include type-setting(19, 27);
+    color: color-fetch(dark-grey);
+    @include cleartext();
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+
+    }
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

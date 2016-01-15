@@ -1,3 +1,41 @@
 .content-area {
-    
+
+}
+
+.our-services {
+    background: color-fetch(light-grey);
+}
+
+.our-services__title {
+    background: color-fetch(light-grey);
+    @include type-setting(17, 48, 19);
+    position: relative;
+    padding: 0 percentage(15/366);
+    top: relative-sizing(-48);
+    width: percentage(366/(520 - 66));
+}
+
+.grid {
+
+}
+
+.grid__column {
+    width: 50%;
+    float: left;
+
+    &--2-columns {
+        width: 100%;
+    }
+}
+
+@include breakpoint(520) {
+
+
+    .our-services__title {
+        width: percentage(732/1100);
+        @include type-setting(24, 57, 19);
+        top: relative-sizing(-57);
+        padding: 0 percentage(26/1100);
+    }
+
 }

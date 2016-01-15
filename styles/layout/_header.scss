@@ -1,3 +1,95 @@
 .masthead {
+    background: url('../images/hero-image.jpg') center center no-repeat color-fetch(darker-grey);
+    background-size: cover;
+    color: color-fetch(white);
+    height: 616px;
+    padding-top: relative-sizing(26);
+
+    a {
+        color: color-fetch(white);
+    }
+}
+
+.masthead__top-bar {
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.logo {
+    width: 148px;
+    height: 0;
+    padding-top: 41px;
+    display: block;
+    overflow: hidden;
+    background: url('../svg/logo.svg') center center no-repeat transparent;
+    background-size: contain;
+    float: left;
+}
+
+.intro {
+    max-width: 375px;
+}
+
+.intro__copy {
+    @include type-setting(28, 37, 19);
+    color: color-fetch(sky-blue);
+}
+
+
+
+@include breakpoint(520) {
+
+    .masthead {
+        height: 752px;
+        padding-top: relative-sizing(56);
+    }
+
+    .logo {
+        width: percentage(221/1100);
+        padding-top: percentage(60/1100);
+    }
+
+    .intro {
+        width: percentage(715/1100);
+        max-width: none;
+    }
+
+    .intro__copy {
+        @include type-setting(39, 48, 19);
+    }
+
+    .main-navigation {
+        @include type-setting(17, 25, 19);
+        float: right;
+    }
+
+    .navigation-list {
+        margin-top: relative-sizing(-4);
+    }
+
+    .navigation-list__item {
+        float: left;
+
+        a {
+            padding: 0 12px;
+        }
+
+        &--cta {
+
+            a {
+                padding: 12px;
+                margin: -12px 12px 0;
+                color: color-fetch(turqoise);
+                border: 1px solid currentcolor;
+                display: inline-block;
+            }
+
+        }
+    }
 
 }
