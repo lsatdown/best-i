@@ -1,8 +1,15 @@
 @import 'config/palette';
 @import 'config/typography';
 
+@import 'functions/color';
+@import 'functions/typography';
+
+@import 'mixins/breakpoints';
+@import 'mixins/typography';
+
 @import 'generic/normalize';
 @import 'generic/reset';
+@import 'generic/typography';
 
 @import 'layout/header';
 @import 'layout/main';
