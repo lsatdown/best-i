@@ -2,6 +2,7 @@
 
 // Require Gulp, and Gulp Load Plugins
 var gulp = require('gulp');
+var path = require('path');
 var $ = require('gulp-load-plugins')();
 
 // Require all PostCSS packages
@@ -26,7 +27,7 @@ gulp.task('styles', function() {
         // Remove any unused CSS
         // (Being a small, static project, it's a perfect use for uncss.)
         .pipe($.uncss({
-            html: 'index.html',
+            html: ['index.html'],
         }))
         // Run PostCSS for polyfilling and optimisation
         .pipe($.postcss(processes))
