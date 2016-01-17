@@ -8,6 +8,16 @@ var $ = require('gulp-load-plugins')();
 gulp.task('scripts', function() {
     gulp.src(['scripts/all.js'], {read: false})
         .pipe($.browserify({
+            shim: {
+                jQuery: {
+                    path: 'scripts/jquery-2.2.0.js',
+                    exports: '$',
+                },
+                owlCarousel: {
+                    path: 'scripts/owl.carousel.js',
+                    exports: 'owl'
+                }
+            },
             insertGlobals: false,
             transform: ['debowerify'],
         }))

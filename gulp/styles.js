@@ -31,6 +31,7 @@ gulp.task('styles', function() {
         // Remove any unused CSS
         // (Being a small, static project, it's a perfect use for uncss.)
         .pipe($.uncss({
+            ignore: [/^\.owl-/],
             html: ['index.html'],
         }))
         // Run PostCSS for polyfilling and optimisation

@@ -7,4 +7,5 @@ var $ = require('gulp-load-plugins')();
 
 gulp.task('watch', function() {
     gulp.watch(['styles/*.scss', 'styles/**/*.scss'], ['styles']);
+    gulp.watch(['scripts/all.js'], ['scripts']);
 });

@@ -51,6 +51,23 @@
     background: url('../images/meeting.jpg') center center no-repeat transparent;
 }
 
+.building {
+    background: url('../images/building.jpg') center center no-repeat transparent;
+}
+
+.office {
+    background: url('../images/office.jpg') center center no-repeat transparent;
+}
+
+.post-carousel {
+
+}
+
+.post-carousel__item {
+    background: color-fetch(darker-grey);
+
+}
+
 @include breakpoint(800) {
 
 
