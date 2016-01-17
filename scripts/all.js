@@ -3,16 +3,17 @@
 var $ = require('jQuery');
 var owl = require('owlCarousel');
 
-$('#posts-carousel').owlCarousel({
-    items: 1,
+$('#post-carousel').owlCarousel({
     loop: true,
     reponsiveClass: true,
+    autoplay: true,
     responsive: {
         0: {
             items: 1,
         },
         800: {
             items: 3,
+            dots: false,
         }
     }
 });

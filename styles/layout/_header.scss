@@ -69,6 +69,7 @@
     .main-navigation {
         @include type-setting(17, 25, 19);
         float: right;
+        width: percentage(732/1100);
     }
 
     .navigation-list {
@@ -78,19 +79,34 @@
 
     .navigation-list__item {
         display: inline-block;
+        padding: 0 percentage(12/732);
 
         a {
-            padding: 0 12px;
+            transition: 0.3s ease;
+
+            &:hover {
+                color: color-fetch(sky-blue);
+            }
         }
 
         &--cta {
+            padding: 0 0 0 percentage(12/732);
+            width: percentage(245/732);
 
             a {
-                padding: 12px;
-                margin: -12px 12px 0;
+                padding: relative-sizing(12) 0;
+                margin: -12px 0 0;
                 color: color-fetch(turqoise);
                 border: 1px solid currentcolor;
                 display: inline-block;
+                width: 100%;
+                text-align: center;
+
+                &:hover {
+                    color: color-fetch(white);
+                    background: color-fetch(sky-blue);
+                    border-color: color-fetch(sky-blue);
+                }
             }
 
         }

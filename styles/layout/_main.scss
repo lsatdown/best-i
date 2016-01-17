@@ -17,7 +17,7 @@
 }
 
 .grid {
-    margin-top: relative-sizing(-48);
+    margin: relative-sizing(-48) 0 relative-sizing(51);
 }
 
 .grid__column {
@@ -59,12 +59,48 @@
     background: url('../images/office.jpg') center center no-repeat transparent;
 }
 
-.post-carousel {
+.articles__inner {
+    margin-top: relative-sizing(60);
+}
 
+.articles__title {
+    @include type-setting(22, 26, 19);
+    margin-bottom: relative-sizing(60);
+}
+
+.post-carousel {
+    margin-bottom: relative-sizing(138);
 }
 
 .post-carousel__item {
     background: color-fetch(darker-grey);
+    height: 420px;
+    display: flex;
+
+    a {
+        color: #fff;
+        flex: 1;
+    }
+
+    .post-category {
+        @include type-setting(14, 41, 19);
+        height: 41px;
+        padding: 0 percentage(12/456);
+    }
+
+    .post-header {
+        padding: relative-sizing(30) percentage(23/456);
+    }
+
+    .post-title {
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: 0;
+    }
+
+    .post-timestamp {
+        color: color-fetch(sky-blue);
+    }
 
 }
 
@@ -79,7 +115,7 @@
     }
 
     .grid {
-        margin-top: relative-sizing(-57);
+        margin: relative-sizing(-57) 0 relative-sizing(71);
     }
 
     .grid__column {
@@ -97,6 +133,29 @@
 
         a {
             padding: relative-sizing(40) percentage(30/(1100 / 3));
+        }
+    }
+
+    .articles__inner {
+        margin-top: relative-sizing(90);
+    }
+
+    .articles__title {
+        @include type-setting(28, 38, 19);
+        margin-bottom: relative-sizing(42);
+    }
+
+    .post-carousel-container {
+        // width: auto;
+        margin: 0 -3px relative-sizing(138);
+    }
+
+    .post-carousel__item {
+        border-left: 3px solid #fff;
+        border-right: 3px solid #fff;
+
+        .post-header {
+            padding: relative-sizing(30) percentage(25/362);
         }
     }
 
