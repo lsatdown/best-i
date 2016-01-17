@@ -16,12 +16,6 @@
 
 .masthead__top-bar {
 
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-        clear: both;
-    }
 }
 
 .logo {
@@ -79,10 +73,11 @@
 
     .navigation-list {
         margin-top: relative-sizing(-4);
+        text-align: right;
     }
 
     .navigation-list__item {
-        float: left;
+        display: inline-block;
 
         a {
             padding: 0 12px;

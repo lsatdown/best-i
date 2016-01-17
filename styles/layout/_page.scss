@@ -3,3 +3,13 @@
     margin: 0 auto;
     padding: 0 relative-sizing(33);
 }
+
+.clearfix {
+    
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

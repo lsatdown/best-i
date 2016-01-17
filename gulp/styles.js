@@ -12,9 +12,13 @@ var cssnano = require('cssnano');
 
 // Store all PostCSS tasks under a processes variable
 var processes = [
-    cssnext,
-    cssnano,
-    autoprefixer,
+    cssnext({
+        browsers:'safari >= 8, ie >= 11'
+    }),
+    cssnano(),
+    autoprefixer({
+        browsers:'safari >= 8, ie >= 11'
+    }),
 ];
 
 // Make the Styles task
