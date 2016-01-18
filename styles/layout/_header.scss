@@ -35,42 +35,78 @@
 
 }
 
+/**
+*
+* Logo Styles
+*
+* Includes an inline SVG which can be styled.
+*
+**/
 .logo {
     width: 148px;
-    // height: 0;
-    // padding-top: relative-sizing(41);
     display: block;
     overflow: hidden;
-    // background: url('../svg/logo.svg') center center no-repeat transparent;
     background-size: contain;
     float: left;
 
-    .st0,
-    .st1 {
+    .first-line,
+    .second-line {
         transition: fill 0.3s ease;
     }
 
-    .st0 {
-        fill:#A1ABAB;
+    .first-line {
+        fill: #a1abab;
     }
 
-    .st1 {
-        fill:#FFFFFF;
+    .second-line {
+        fill: colour-fetch(white);
     }
 
     &:hover {
 
-        // svg {
-        //     fill: colour-fetch(sky-blue);
-        // }
-
-        .st0,
-        .st1 {
+        .first-line,
+        .second-line {
             fill: colour-fetch(sky-blue);
         }
     }
 }
 
+/**
+*
+* Mobile Navigation Toggles
+*
+**/
+.mobile-navigation-toggle {
+    width: 26px;
+    position: absolute;
+    top: 0;
+    right: 33px;
+
+    .hamburger-line,
+    .cross {
+        fill: colour-fetch(white);
+        transition: fill 0.3s ease;
+    }
+
+    &:hover {
+        .hamburger-line,
+        .cross {
+            fill: colour-fetch(sky-blue);
+        }
+    }
+}
+
+.navigation-close {
+    top: 26px;
+}
+
+/**
+*
+* Fixed Main Navigation
+*
+* Only fixed on mobile.
+*
+**/
 .main-navigation {
     background: colour-fetch(darker-grey);
     transform: translate3d(-100%, 0, 0);
@@ -80,7 +116,7 @@
     right: 0;
     left: 0;
     z-index: 10;
-    padding: relative-sizing(41) 33px;
+    padding: relative-sizing(26) 33px;
     transition: transform 0.3s ease;
 
     &.is-open {
@@ -89,6 +125,19 @@
 
 }
 
+.main-navigation-list {
+
+}
+
+.main-navigation-list__item {
+
+}
+
+/**
+*
+* Intro section.
+*
+**/
 .intro {
     max-width: 375px;
     position: absolute;
@@ -102,18 +151,12 @@
     color: colour-fetch(sky-blue);
 }
 
-.button--read-more {
-    color: #afafaf;
-    width: 180px;
-    display: block;
 
-    &:hover {
-        background: #afafaf;
-        border-color: #afafaf;
-        color: #fff;
-    }
-}
-
+/**
+*
+* 900px breakpoint for the header
+*
+**/
 @include breakpoint(900) {
 
     .masthead {
@@ -123,7 +166,6 @@
 
     .logo {
         width: 221px;
-        // padding-top: relative-sizing(60);
     }
 
     .intro {
@@ -141,6 +183,14 @@
     }
 }
 
+/**
+*
+* 1080px breakpoint for the main navigation.
+*
+* Since the design of the navigation breaks easily on desktop, the best idea is
+* to make it work on large screens that can accomodate its styles.
+*
+**/
 @include breakpoint(1080) {
 
     .mobile-navigation-toggle {

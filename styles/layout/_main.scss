@@ -1,7 +1,8 @@
-.content-area {
-
-}
-
+/**
+*
+* Our Services section
+*
+**/
 .our-services {
     background: colour-fetch(light-grey);
 }
@@ -15,6 +16,8 @@
     margin-bottom: 0;
     width: percentage(366/(520 - 66));
 }
+
+
 
 .grid {
     margin: relative-sizing(-48) 0 relative-sizing(51);
@@ -56,6 +59,13 @@
     }
 }
 
+/**
+*
+* Grid Column
+*
+*
+*
+**/
 .grid__column {
     width: 50%;
     float: left;
@@ -63,18 +73,23 @@
     position: relative;
     display: flex;
 
+    // Set 2 columns to double the default width
     &--2-columns {
         width: 100%;
     }
 
+    // Remove 2 row element
+    // Because it's just decoration, remove it entirely
     &--2-rows {
         display: none;
     }
 
+    // Set background size to cover
     &--image {
         background-size: cover;
     }
 
+    // Set anchor to use flex so it can cover the entire area
     a {
         background: #fff;
         flex: 1;
@@ -102,11 +117,11 @@
     background: url('../images/office.jpg') center center no-repeat transparent;
 }
 
-.button--services {
-    width: 253px;
-    display: block;
-    margin: 0 auto relative-sizing(65);
-}
+/**
+*
+* Articles Section
+*
+**/
 
 .articles__inner {
     margin-top: relative-sizing(60);
@@ -119,6 +134,29 @@
 
 .post-carousel {
     margin-bottom: relative-sizing(138);
+}
+
+// Carousel Dots
+.owl-dots {
+    position: absolute;
+    bottom: 30px;
+    right: 8px;
+    z-index: 500;
+}
+
+.owl-dot {
+    background: rgba(colour-fetch(medium-grey), 0);
+    width: 15px;
+    padding-top: relative-sizing(15);
+    border-radius: 50%;
+    border: 1px solid colour-fetch(medium-grey);
+    margin: 0 12px;
+    transition: background 0.3s ease;
+    float: left;
+
+    &.active {
+        background: colour-fetch(medium-grey);
+    }
 }
 
 .post-carousel__item {
@@ -171,11 +209,20 @@
         padding: 0 percentage(26/1100);
     }
 
+    /**
+    *
+    * Additional Grid Decorations
+    *
+    * On the Desktop, there are more Grid Decorations.
+    * Using nth-of-type(), the additional decorations can be applied.
+    *
+    **/
     .grid {
         margin: relative-sizing(-57) 0 relative-sizing(71);
 
         li {
 
+            // Make shared styles for all elements needing decoration
             &:nth-of-type(3) a,
             &:nth-of-type(4) a,
             &:nth-of-type(8) a,
@@ -200,6 +247,7 @@
 
             }
 
+            // Target the third item
             &:nth-of-type(3) a {
 
                 &:before,
@@ -218,8 +266,10 @@
                 }
             }
 
+            // Target the 4th and 9th items.
             &:nth-of-type(4) a,
             &:nth-of-type(9) a {
+
                 &:before,
                 &:after {
                     width: 45px;
@@ -229,6 +279,7 @@
                 }
             }
 
+            // Remove second line on 8th item.
             &:nth-of-type(8) a {
 
                 &:after {
@@ -253,7 +304,7 @@
         }
 
         a {
-            padding: relative-sizing(40) percentage(30/(1100 / 3));
+            padding: relative-sizing(30) percentage(30/(1100 / 3));
         }
     }
 
@@ -272,13 +323,16 @@
     }
 
     .post-carousel-container {
-        // width: auto;
         margin: 0 -3px relative-sizing(138);
     }
 
+    // .owl-dots {
+    //     display: none;
+    // }
+
     .post-carousel__item {
-        border-left: 3px solid #fff;
-        border-right: 3px solid #fff;
+        border-left: 3px solid colour-fetch(white);
+        border-right: 3px solid colour-fetch(white);
 
         .post-category {
             padding: 0 percentage(12/362);
