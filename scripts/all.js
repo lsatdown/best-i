@@ -1,8 +1,10 @@
 'use strict';
 
+// Require additional scripts
 var $ = require('jQuery');
 var owl = require('owlCarousel');
 
+// Add settings for Owl Carousel
 $('#post-carousel').owlCarousel({
     loop: true,
     reponsiveClass: true,
@@ -18,6 +20,7 @@ $('#post-carousel').owlCarousel({
     }
 });
 
+// Add basic toggle for the mobile navigation
 $('.mobile-navigation-toggle').on('click', function() {
     var target = $(this).attr('href');
     $(target).toggleClass('is-open');

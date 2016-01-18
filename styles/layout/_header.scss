@@ -14,7 +14,7 @@
 
 .masthead__inner {
     position: relative;
-    height: 616px;
+    height: 596px;
 }
 
 /**
@@ -125,14 +125,6 @@
 
 }
 
-.main-navigation-list {
-
-}
-
-.main-navigation-list__item {
-
-}
-
 /**
 *
 * Intro section.
@@ -141,7 +133,7 @@
 .intro {
     max-width: 375px;
     position: absolute;
-    bottom: 122px;
+    bottom: 123px;
     left: 33px;
     right: 33px;
 }
@@ -168,10 +160,18 @@
         width: 221px;
     }
 
+    .main-navigation {
+        padding: relative-sizing(55) 33px;
+    }
+
+    .navigation-close {
+        top: 55px;
+    }
+
     .intro {
         width: percentage(715/1166);
         max-width: none;
-        bottom: 81px;
+        bottom: 61px;
     }
 
     .intro__copy {

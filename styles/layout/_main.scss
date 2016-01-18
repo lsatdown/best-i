@@ -204,9 +204,10 @@
 
     .our-services__title {
         width: percentage(732/1100);
-        @include type-setting(24, 57, 19);
+        height: 57px;
+        @include type-setting(24, 51, 19);
         top: relative-sizing(-57);
-        padding: 0 percentage(26/1100);
+        padding: relative-sizing(6) percentage(26/1100) 0;
     }
 
     /**
@@ -325,10 +326,6 @@
     .post-carousel-container {
         margin: 0 -3px relative-sizing(138);
     }
-
-    // .owl-dots {
-    //     display: none;
-    // }
 
     .post-carousel__item {
         border-left: 3px solid colour-fetch(white);
