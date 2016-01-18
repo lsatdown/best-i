@@ -30,3 +30,5 @@ Keeping it close to the design was very, very challenging. I considered it my to
 ## Improvements
 
 One thing I would suggest is the addition of animations after the page is loaded; letting the intro text slide in on the left, and the top of the header and main content areas slide in, subtly, and vertically. I think it would add a gentle touch to the good design that it is already. Another suggestion would be to make a fading in animation of the introduction copy.
+
+An improvement that could be useful is checking colour contrasts in the browser. It's possible the mixture of greys could lead to a clash in contrast, possibly making it harder for some users to see. Checking for contrast in various colour spectrums to make sure colourblind users can still use the design can be beneficial.
