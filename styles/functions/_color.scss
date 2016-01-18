@@ -5,18 +5,18 @@
 * For easy reference of the `$color-palette` map.
 *
 **/
-@function color-fetch($color-name) {
+@function colour-fetch($colour-name) {
 
     //Set `$output` to default as false
     $output: false;
 
     // Check if colour actually exists
-    @if not map-get($color-palette, $color-name) {
+    @if not map-get($colour-palette, $colour-name) {
         @error 'The colour #{$color-name} does not exist, please check the `$color-palette` map.';
     }
     // Get colour if it exists
     @else {
-        $output: map-get($color-palette, $color-name);
+        $output: map-get($colour-palette, $colour-name);
     }
 
     // Return output

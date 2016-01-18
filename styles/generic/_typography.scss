@@ -1,5 +1,4 @@
-// Root Font Size Variable — best to avoid changing unless you like risks.
-// If you're relying on it **relatively** with ems, be careful.
+// Root Font Size Variable
 $root-font-size: 16!default;
 
 /**
@@ -17,20 +16,22 @@ body {
     font-family: $body-font;
     font-weight: 100;
     @include type-setting(19, 27);
-    color: color-fetch(dark-grey);
+    color: colour-fetch(dark-grey);
     @include cleartext();
     text-rendering: optimizeLegibility;
 }
 
+// Generic link styles
 a {
-    color: color-fetch(white);
+    color: colour-fetch(white);
     text-decoration: none;
 
     &:hover {
-        color: color-fetch(sky-blue);
+        color: colour-fetch(sky-blue);
     }
 }
 
+// Remove margin top styles on headings and paragraphs
 h1,
 h2,
 h3,
@@ -38,12 +39,14 @@ p {
     margin-top: 0;
 }
 
+// Set font weight on headings
 h1,
 h2,
 h3 {
     font-weight: 100;
 }
 
+// Generic list resetting
 ul,
 ol {
     margin: 0;

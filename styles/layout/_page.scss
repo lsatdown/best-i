@@ -1,5 +1,5 @@
 ::selection {
-    background: color-fetch(darker-grey);
+    background: colour-fetch(darker-grey);
     color: #fff;
 }
 
@@ -20,16 +20,16 @@
 }
 
 .button {
-    color: color-fetch(medium-grey);
+    color: colour-fetch(medium-grey);
     border: 1px solid currentcolor;
     text-align: center;
     padding: relative-sizing(10) 0 relative-sizing(6);
     transition: 0.3s ease;
 
     &:hover {
-        background: color-fetch(medium-grey);
+        background: colour-fetch(medium-grey);
         color: #fff;
-        border-color: color-fetch(medium-grey);
+        border-color: colour-fetch(medium-grey);
     }
 }
 

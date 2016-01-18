@@ -1,7 +1,14 @@
+/**
+*
+* Header styles
+*
+*
+*
+**/
 .masthead {
-    background: url('../images/hero-image.jpg') center center no-repeat color-fetch(darker-grey);
+    background: url('../images/hero-image.jpg') center center no-repeat colour-fetch(darker-grey);
     background-size: cover;
-    color: color-fetch(white);
+    color: colour-fetch(white);
     padding-top: relative-sizing(26);
 }
 
@@ -10,14 +17,19 @@
     height: 616px;
 }
 
+/**
+*
+*
+*
+**/
 .masthead__top-bar {
 
     a {
-        color: color-fetch(white);
+        color: colour-fetch(white);
         transition: 0.3s ease;
 
         &:hover {
-            color: color-fetch(sky-blue);
+            color: colour-fetch(sky-blue);
         }
     }
 
@@ -25,17 +37,42 @@
 
 .logo {
     width: 148px;
-    height: 0;
-    padding-top: relative-sizing(41);
+    // height: 0;
+    // padding-top: relative-sizing(41);
     display: block;
     overflow: hidden;
-    background: url('../svg/logo.svg') center center no-repeat transparent;
+    // background: url('../svg/logo.svg') center center no-repeat transparent;
     background-size: contain;
     float: left;
+
+    .st0,
+    .st1 {
+        transition: fill 0.3s ease;
+    }
+
+    .st0 {
+        fill:#A1ABAB;
+    }
+
+    .st1 {
+        fill:#FFFFFF;
+    }
+
+    &:hover {
+
+        // svg {
+        //     fill: colour-fetch(sky-blue);
+        // }
+
+        .st0,
+        .st1 {
+            fill: colour-fetch(sky-blue);
+        }
+    }
 }
 
 .main-navigation {
-    background: color-fetch(darker-grey);
+    background: colour-fetch(darker-grey);
     transform: translate3d(-100%, 0, 0);
     position: fixed;
     top: 0;
@@ -62,7 +99,7 @@
 
 .intro__copy {
     @include type-setting(28, 37, 19);
-    color: color-fetch(sky-blue);
+    color: colour-fetch(sky-blue);
 }
 
 .button--read-more {
@@ -86,7 +123,7 @@
 
     .logo {
         width: 221px;
-        padding-top: relative-sizing(60);
+        // padding-top: relative-sizing(60);
     }
 
     .intro {
@@ -137,16 +174,16 @@
             a {
                 padding: relative-sizing(10) 0;
                 margin: -(relative-sizing(11)) 0 0;
-                color: color-fetch(turqoise);
+                color: colour-fetch(turqoise);
                 border: 1px solid currentcolor;
                 display: inline-block;
                 width: 100%;
                 text-align: center;
 
                 &:hover {
-                    color: color-fetch(white);
-                    background: color-fetch(sky-blue);
-                    border-color: color-fetch(sky-blue);
+                    color: colour-fetch(white);
+                    background: colour-fetch(sky-blue);
+                    border-color: colour-fetch(sky-blue);
                 }
             }
 
