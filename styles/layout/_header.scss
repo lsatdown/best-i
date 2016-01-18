@@ -1,0 +1,242 @@
+/**
+*
+* Header styles
+*
+*
+*
+**/
+.masthead {
+    background: url('../images/hero-image.jpg') center center no-repeat colour-fetch(darker-grey);
+    background-size: cover;
+    color: colour-fetch(white);
+    padding-top: relative-sizing(26);
+}
+
+.masthead__inner {
+    position: relative;
+    height: 596px;
+}
+
+/**
+*
+*
+*
+**/
+.masthead__top-bar {
+
+    a {
+        color: colour-fetch(white);
+        transition: 0.3s ease;
+
+        &:hover {
+            color: colour-fetch(sky-blue);
+        }
+    }
+
+}
+
+/**
+*
+* Logo Styles
+*
+* Includes an inline SVG which can be styled.
+*
+**/
+.logo {
+    width: 148px;
+    display: block;
+    overflow: hidden;
+    background-size: contain;
+    float: left;
+
+    .first-line,
+    .second-line {
+        transition: fill 0.3s ease;
+    }
+
+    .first-line {
+        fill: #a1abab;
+    }
+
+    .second-line {
+        fill: colour-fetch(white);
+    }
+
+    &:hover {
+
+        .first-line,
+        .second-line {
+            fill: colour-fetch(sky-blue);
+        }
+    }
+}
+
+/**
+*
+* Mobile Navigation Toggles
+*
+**/
+.mobile-navigation-toggle {
+    width: 26px;
+    position: absolute;
+    top: 0;
+    right: 33px;
+
+    .hamburger-line,
+    .cross {
+        fill: colour-fetch(white);
+        transition: fill 0.3s ease;
+    }
+
+    &:hover {
+        .hamburger-line,
+        .cross {
+            fill: colour-fetch(sky-blue);
+        }
+    }
+}
+
+.navigation-close {
+    top: 26px;
+}
+
+/**
+*
+* Fixed Main Navigation
+*
+* Only fixed on mobile.
+*
+**/
+.main-navigation {
+    background: colour-fetch(darker-grey);
+    transform: translate3d(-100%, 0, 0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    padding: relative-sizing(26) 33px;
+    transition: transform 0.3s ease;
+
+    &.is-open {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+/**
+*
+* Intro section.
+*
+**/
+.intro {
+    max-width: 375px;
+    position: absolute;
+    bottom: 123px;
+    left: 33px;
+    right: 33px;
+}
+
+.intro__copy {
+    @include type-setting(28, 37, 19);
+    color: colour-fetch(sky-blue);
+}
+
+
+/**
+*
+* 900px breakpoint for the header
+*
+**/
+@include breakpoint(900) {
+
+    .masthead {
+        height: 752px;
+        padding-top: relative-sizing(55);
+    }
+
+    .logo {
+        width: 221px;
+    }
+
+    .main-navigation {
+        padding: relative-sizing(55) 33px;
+    }
+
+    .navigation-close {
+        top: 55px;
+    }
+
+    .intro {
+        width: percentage(715/1166);
+        max-width: none;
+        bottom: 61px;
+    }
+
+    .intro__copy {
+        @include type-setting(39, 48, 19);
+    }
+
+    .button--read-more {
+        width: 165px;
+    }
+}
+
+/**
+*
+* 1080px breakpoint for the main navigation.
+*
+* Since the design of the navigation breaks easily on desktop, the best idea is
+* to make it work on large screens that can accomodate its styles.
+*
+**/
+@include breakpoint(1080) {
+
+    .mobile-navigation-toggle {
+        display: none;
+    }
+
+    .main-navigation {
+        @include type-setting(17, 25, 19);
+        float: right;
+        width: percentage(732/1100);
+        position: static;
+        background: transparent;
+        padding: 0;
+        transform: translate(0);
+        transition: none;
+    }
+
+    .navigation-list {
+        margin-top: relative-sizing(-5);
+        text-align: right;
+    }
+
+    .navigation-list__item {
+        display: inline-block;
+        padding: 0 percentage(10/732);
+
+        &--cta {
+            padding: 0 percentage(3/732) 0 percentage(14/732);
+            width: percentage(252/732);
+
+            a {
+                padding: relative-sizing(10) 0;
+                margin: -(relative-sizing(11)) 0 0;
+                color: colour-fetch(turqoise);
+                border: 1px solid currentcolor;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+
+                &:hover {
+                    color: colour-fetch(white);
+                    background: colour-fetch(sky-blue);
+                    border-color: colour-fetch(sky-blue);
+                }
+            }
+
+        }
+    }
+}

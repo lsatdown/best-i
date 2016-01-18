@@ -1,0 +1,74 @@
+/**
+*
+* Compiled Stylesheet file
+*
+* Using ITCSS methodology, the files are ordered from least to most specific.
+* This assures that all styles cascade without clashes further down the
+* stylesheet; this method makes it easier to handle specificity issues.
+*
+*
+**/
+
+/**
+*
+* Configuration files come first.
+* These contain settings essential for the project.
+*
+**/
+@import 'config/palette';
+@import 'config/typography';
+
+/**
+*
+* Project Functions
+* Very basic functions for the project.
+*
+**/
+@import 'functions/color';
+@import 'functions/typography';
+
+/**
+*
+* Project Mixins
+* Mixins that are being used throughout the project.
+*
+**/
+@import 'mixins/breakpoints';
+@import 'mixins/typography';
+
+/**
+*
+* Generic files
+* Contains resets and global styling.
+*
+**/
+@import 'generic/normalize';
+@import 'generic/reset';
+@import 'generic/typography';
+
+/**
+*
+* Project Objects
+*
+* Styles for objects, such as buttons.
+*
+**/
+@import 'objects/buttons';
+
+/**
+*
+* Layout specific files
+* Styles that are used on the page and layout elements.
+*
+**/
+@import 'layout/page';
+@import 'layout/header';
+@import 'layout/main';
+
+/**
+*
+* Plugin styles
+* Can be high specificity; carries styles for plugins in Javascript.
+*
+**/
+@import 'plugins/owl-carousel';
