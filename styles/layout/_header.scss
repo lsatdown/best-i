@@ -57,6 +57,7 @@
     position: absolute;
     bottom: 122px;
     left: 33px;
+    right: 33px;
 }
 
 .intro__copy {
@@ -76,27 +77,22 @@
     }
 }
 
-@include breakpoint(800) {
+@include breakpoint(900) {
 
     .masthead {
         height: 752px;
-        padding-top: relative-sizing(56);
+        padding-top: relative-sizing(55);
     }
 
     .logo {
-        width: percentage(221/1100);
-        padding-top: percentage(60/1100);
-    }
-
-    .mobile-navigation-toggle {
-        display: none;
+        width: 221px;
+        padding-top: relative-sizing(60);
     }
 
     .intro {
         width: percentage(715/1166);
         max-width: none;
-        bottom: 163px;
-
+        bottom: 81px;
     }
 
     .intro__copy {
@@ -105,6 +101,13 @@
 
     .button--read-more {
         width: 165px;
+    }
+}
+
+@include breakpoint(1080) {
+
+    .mobile-navigation-toggle {
+        display: none;
     }
 
     .main-navigation {
@@ -115,24 +118,25 @@
         background: transparent;
         padding: 0;
         transform: translate(0);
+        transition: none;
     }
 
     .navigation-list {
-        margin-top: relative-sizing(-4);
+        margin-top: relative-sizing(-5);
         text-align: right;
     }
 
     .navigation-list__item {
         display: inline-block;
-        padding: 0 percentage(12/732);
+        padding: 0 percentage(10/732);
 
         &--cta {
-            padding: 0 0 0 percentage(12/732);
-            width: percentage(245/732);
+            padding: 0 percentage(3/732) 0 percentage(14/732);
+            width: percentage(252/732);
 
             a {
-                padding: relative-sizing(12) 0;
-                margin: -12px 0 0;
+                padding: relative-sizing(10) 0;
+                margin: -(relative-sizing(11)) 0 0;
                 color: color-fetch(turqoise);
                 border: 1px solid currentcolor;
                 display: inline-block;
@@ -148,5 +152,4 @@
 
         }
     }
-
 }

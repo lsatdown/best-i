@@ -93,6 +93,7 @@
     a {
         color: #fff;
         flex: 1;
+        transform: translate3d( 0, 0, 0);
     }
 
     .post-category {
@@ -157,16 +158,16 @@
 
     .button--services {
         width: 236px;
-        margin: 0 auto relative-sizing(118);
+        margin: 0 auto relative-sizing(117);
     }
 
     .articles__inner {
-        margin-top: relative-sizing(90);
+        margin-top: relative-sizing(84);
     }
 
     .articles__title {
         @include type-setting(28, 38, 19);
-        margin-bottom: relative-sizing(42);
+        margin-bottom: relative-sizing(32);
     }
 
     .post-carousel-container {
@@ -178,12 +179,17 @@
         border-left: 3px solid #fff;
         border-right: 3px solid #fff;
 
+        .post-category {
+            padding: 0 percentage(12/362);
+            margin: 0;
+        }
+
         .post-thumbnail {
             height: 186px;
         }
 
         .post-header {
-            padding: relative-sizing(30) percentage(25/362);
+            padding: relative-sizing(28) percentage(110/362) relative-sizing(28) percentage(25/362);
         }
     }
 

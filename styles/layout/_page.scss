@@ -1,3 +1,8 @@
+::selection {
+    background: color-fetch(darker-grey);
+    color: #fff;
+}
+
 .container {
     max-width: 1166px;
     margin: 0 auto;
@@ -14,16 +19,11 @@
     }
 }
 
-::selection {
-    background: color-fetch(darker-grey);
-    color: #fff;
-}
-
 .button {
     color: color-fetch(medium-grey);
     border: 1px solid currentcolor;
     text-align: center;
-    padding: relative-sizing(8) 0;
+    padding: relative-sizing(10) 0 relative-sizing(6);
     transition: 0.3s ease;
 
     &:hover {
@@ -35,9 +35,13 @@
 
 .button--expand {
     padding-left: relative-sizing(48);
+    position: relative;
 
-    &:before,
-    &:after {
-        content: '';
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
     }
 }
