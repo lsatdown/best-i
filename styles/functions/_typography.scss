@@ -1,0 +1,50 @@
+/**
+*
+* Relative Sizing Function
+*
+* Simple function for returning relative values using rems, and ems, optionally.
+* Primary argument is for a target value to be converted.
+* Relies on the root's font size for caclulation, set as a global variable.
+*
+* Secondary argument (optional) is for a context to the target value.
+* Output is converted into ems.
+*
+* Can be used for padding, margins, and other sizings.
+* Example (using rems):
+* margin-top: relative-sizing(20);
+*
+* Output:
+* margin-top: 1.25rem;
+*
+* Can also be used for type sizing. However, if you're setting overall type on
+* an element, use the `type-setting()` mixin instead.
+* https://gist.github.com/iainspad/d3df585d2ebd78a06b6a
+*
+**/
+@function relative-sizing($target, $context: false) {
+    // Add a false default to `$value`.
+    $value: false;
+
+    //Is the target value unitless?
+    @if unitless($target) {
+
+        //Is there a context?
+        @if $context {
+
+            //Is the context unitless?
+            @if unitless($context) {
+                $value: ($target / $context) * 1em;
+            } @else {
+                @error 'Your value for `$context` is not unitless.';
+            }
+
+        } @else {
+            $value: ($target / $root-font-size) * 1rem;
+        }
+
+    } @else {
+        @error 'Your value for `$target` is not unitless.';
+    }
+
+    @return $value;
+}

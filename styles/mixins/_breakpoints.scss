@@ -1,0 +1,16 @@
+/**
+*
+* Breakpoint Mixin
+*
+* For simple writing of breakpoints, output in ems.
+*
+**/
+@mixin breakpoint($breakpoint) {
+
+    @media screen and (min-width: (($breakpoint / 16) * 1em)) {
+
+        @content;
+
+    }
+
+}

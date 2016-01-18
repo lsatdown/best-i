@@ -1,0 +1,25 @@
+::selection {
+    background: colour-fetch(darker-grey);
+    color: #fff;
+}
+
+.container {
+    max-width: 1166px;
+    margin: 0 auto;
+    padding: 0 relative-sizing(33);
+}
+
+/**
+*
+* Usable clearfix class
+*
+**/
+.clearfix {
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
