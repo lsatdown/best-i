@@ -32,7 +32,7 @@ gulp.task('styles', function() {
         // (Being a small, static project, it's a perfect use for uncss.)
         .pipe($.uncss({
             // Provide an array of selectors for uncss to ignore
-            ignore: ['.main-navigation.is-open', /^\.owl-/],
+            ignore: ['.main-navigation.is-open', '.owl-dots', '.owl-dot', /^\.owl-/,],
             html: ['index.html'],
         }))
         // Run PostCSS for polyfilling and optimisation
