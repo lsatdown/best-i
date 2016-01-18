@@ -17,3 +17,9 @@ $('#post-carousel').owlCarousel({
         }
     }
 });
+
+$('.mobile-navigation-toggle').on('click', function() {
+    var target = $(this).attr('href');
+    $(target).toggleClass('is-open');
+    return false;
+});

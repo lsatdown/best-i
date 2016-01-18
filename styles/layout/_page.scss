@@ -5,11 +5,39 @@
 }
 
 .clearfix {
-    
+
     &:before,
     &:after {
         content: '';
         display: table;
         clear: both;
+    }
+}
+
+::selection {
+    background: color-fetch(darker-grey);
+    color: #fff;
+}
+
+.button {
+    color: color-fetch(medium-grey);
+    border: 1px solid currentcolor;
+    text-align: center;
+    padding: relative-sizing(8) 0;
+    transition: 0.3s ease;
+
+    &:hover {
+        background: color-fetch(medium-grey);
+        color: #fff;
+        border-color: color-fetch(medium-grey);
+    }
+}
+
+.button--expand {
+    padding-left: relative-sizing(48);
+
+    &:before,
+    &:after {
+        content: '';
     }
 }

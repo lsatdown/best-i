@@ -3,10 +3,6 @@
     background-size: cover;
     color: color-fetch(white);
     padding-top: relative-sizing(26);
-
-    a {
-        color: color-fetch(white);
-    }
 }
 
 .masthead__inner {
@@ -16,17 +12,44 @@
 
 .masthead__top-bar {
 
+    a {
+        color: color-fetch(white);
+        transition: 0.3s ease;
+
+        &:hover {
+            color: color-fetch(sky-blue);
+        }
+    }
+
 }
 
 .logo {
     width: 148px;
     height: 0;
-    padding-top: 41px;
+    padding-top: relative-sizing(41);
     display: block;
     overflow: hidden;
     background: url('../svg/logo.svg') center center no-repeat transparent;
     background-size: contain;
     float: left;
+}
+
+.main-navigation {
+    background: color-fetch(darker-grey);
+    transform: translate3d(-100%, 0, 0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    padding: relative-sizing(41) 33px;
+    transition: transform 0.3s ease;
+
+    &.is-open {
+        transform: translate3d(0, 0, 0);
+    }
+
 }
 
 .intro {
@@ -41,7 +64,17 @@
     color: color-fetch(sky-blue);
 }
 
+.button--read-more {
+    color: #afafaf;
+    width: 180px;
+    display: block;
 
+    &:hover {
+        background: #afafaf;
+        border-color: #afafaf;
+        color: #fff;
+    }
+}
 
 @include breakpoint(800) {
 
@@ -55,6 +88,10 @@
         padding-top: percentage(60/1100);
     }
 
+    .mobile-navigation-toggle {
+        display: none;
+    }
+
     .intro {
         width: percentage(715/1166);
         max-width: none;
@@ -66,10 +103,18 @@
         @include type-setting(39, 48, 19);
     }
 
+    .button--read-more {
+        width: 165px;
+    }
+
     .main-navigation {
         @include type-setting(17, 25, 19);
         float: right;
         width: percentage(732/1100);
+        position: static;
+        background: transparent;
+        padding: 0;
+        transform: translate(0);
     }
 
     .navigation-list {
@@ -80,14 +125,6 @@
     .navigation-list__item {
         display: inline-block;
         padding: 0 percentage(12/732);
-
-        a {
-            transition: 0.3s ease;
-
-            &:hover {
-                color: color-fetch(sky-blue);
-            }
-        }
 
         &--cta {
             padding: 0 0 0 percentage(12/732);
